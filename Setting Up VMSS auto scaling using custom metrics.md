@@ -162,6 +162,7 @@ For scaling using memory counter we need use guest OS based metrics, The metrics
 "storageAccountSasToken": **"SAS TOKEN**"
 
 } 
+
 **Note: Edit protected settings. Json -> change the storage account name and exclude “?” in SAS TOKEN, Make sure to have the SAS token valid for a longer period, else scaling will not work as it depends on Guest Metrics.**
 
 3. Run the below CLI Command
