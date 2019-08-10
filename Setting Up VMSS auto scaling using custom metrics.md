@@ -574,4 +574,4 @@ az vmss diagnostics set --resource-group xxx --vmss-name xxx --settings config.t
 
 az vmss diagnostics set --resource-group xxx --vmss-name xxx --settings config.txt --protected-settings protected-settings. Json.
 
-4. Once the provision is successful you will be able to view the Guest metrics.
+4. Once the provision is successful you will be able to view the Guest metrics
