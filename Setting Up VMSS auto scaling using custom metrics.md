@@ -9,7 +9,7 @@ For scaling using memory counter we need use guest OS based metrics, The metrics
 **Steps for Installation.**
 
 1. Copy the below script to the notepad and save the file as **“config.txt”****
-
+```
 {
 
 "WadCfg": {
@@ -151,10 +151,12 @@ For scaling using memory counter we need use guest OS based metrics, The metrics
 "storageAccount": "**ENTER THE STORAGE ACCOUNT NAME**"
 
 }
-
+```
 **Note: Edit config.txt -> change the resourceid and storage account name.**
 
 2.  Copy the below script to the notepad and save the file as **“protected settings. Json”**
+
+```
  {
 
 "storageAccountName": "**STORAGE ACCOUNT NAME**",
@@ -162,7 +164,7 @@ For scaling using memory counter we need use guest OS based metrics, The metrics
 "storageAccountSasToken": **"SAS TOKEN**"
 
 } 
-
+```
 **Note: Edit protected settings. Json -> change the storage account name and exclude “?” in SAS TOKEN, Make sure to have the SAS token valid for a longer period, else scaling will not work as it depends on Guest Metrics.**
 
 3. Run the below CLI Command
@@ -174,7 +176,7 @@ az vmss diagnostics set --resource-group xxx --vmss-name xxx --settings config.t
 **Installation of diagnostic extension in VMSS for Linux**
 
 1. Copy the below script to the notepad and save the file as **“config.txt”**
-
+```
 {
 
 "StorageAccount": "**ENTER THE STORAGE ACCOUNT NAME**",
@@ -556,19 +558,16 @@ az vmss diagnostics set --resource-group xxx --vmss-name xxx --settings config.t
 }
 
 }
-
+```
 **Note: Edit config.txt -> change the resourceid and storage account name.**
 
 2.  Copy the below script to the notepad and save the file as **“protected settings. Json”**
-
+```
 {
-
-"storageAccountName": "**STORAGE ACCOUNT NAME**",
-
-"storageAccountSasToken": **"SAS TOKEN**"
-
+  "storageAccountName": "**STORAGE ACCOUNT NAME**",
+  "storageAccountSasToken": "**SAS TOKEN**"
 }
-
+```
 **Note: Edit protected settings. Json -> change the storage account name and exclude “?” in SAS TOKEN, Make sure to have the SAS token valid for a longer period, else scaling will not work as it depends on Guest Metrics.**
 
 3. Run the below CLI Command
