@@ -1,4 +1,4 @@
-**Setting Up VMSS auto scaling using custom metrics for Windows**
+#Setting Up VMSS auto scaling using custom metrics for Windows
 
 When Scaling based on the CPU in VMSS you can use the host metrics to create the auto scale rules. The metrics are available by default in any windows Or Linux VMSS.
 
